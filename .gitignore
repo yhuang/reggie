@@ -50,3 +50,5 @@ pkg
 
 .idea/*
 Gemfile.lock
+
+spec/spec_helper.rb

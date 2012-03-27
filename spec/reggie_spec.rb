@@ -4,8 +4,6 @@ describe Reggie do
   context "new" do
     before :all do
       VCR.insert_cassette 'new', :record => :new_episodes
-#      compression_url = "https://api.edgecast.com/v2/mcc/customers/#{EDGECAST_ACCOUNT[:customer_id]}/compression"
-#      stub_request(:get, compression_url).with(:accept => :json, :authorization => 'valid').to_return(:status => 200)
     end
 
     after :all do
@@ -37,7 +35,7 @@ describe Reggie do
     end
   end
 
-  context "load" do
+  context "Cache Management" do
     before :all do
       @reg = Reggie.new(:customer_id => EDGECAST_ACCOUNT[:customer_id], :token => EDGECAST_ACCOUNT[:token])
       @urls = {
@@ -47,34 +45,36 @@ describe Reggie do
         :wrong_domain => "http://www.amazon.com",
       }
 
-      VCR.insert_cassette 'load', :record => :new_episodes
+      VCR.insert_cassette 'cache_management', :record => :new_episodes
     end
 
     after :all do
       VCR.eject_cassette
     end
 
-    describe "valid cached image" do
-      it "should return a 200 response" do
-        @reg.load(@urls[:valid]).code.should == 200
+    [:load, :purge].each do |method|
+      describe "#{method} valid cached image" do
+        it "should return a 200 response" do
+          @reg.send(method, @urls[:valid]).code.should == 200
+        end
       end
-    end
 
-    describe "empty URL" do
-      it "should return a RestClient::BadRequest" do
-        @reg.load(@urls[:empty]).should be_a RestClient::BadRequest
+      describe "#{method} non-existent cached image" do
+        it "should return a 200 response" do
+          @reg.send(method, @urls[:non_existent]).code.should == 200
+        end
       end
-    end
 
-    describe "image from wrong domain" do
-      it "should return a RestClient::BadRequest" do
-        @reg.load(@urls[:wrong_domain]).should be_a RestClient::BadRequest
+      describe "#{method} empty URL" do
+        it "should return a RestClient::BadRequest" do
+          @reg.send(method, @urls[:empty]).should be_a RestClient::BadRequest
+        end
       end
-    end
 
-    describe "non-existent cached image" do
-      it "should return a 200 response" do
-        @reg.load(@urls[:non_existent]).code.should == 200
+      describe "#{method} image from wrong domain" do
+        it "should return a RestClient::BadRequest" do
+          @reg.send(method, @urls[:wrong_domain]).should be_a RestClient::BadRequest
+        end
       end
     end
   end

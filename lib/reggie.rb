@@ -34,4 +34,15 @@ class Reggie
     rescue => e
     end
   end
+
+  def purge(image_url)
+    begin
+      response = RestClient.put "#{@base_uri}/#{@customer_id}/edge/purge",
+                                { :MediaPath => image_url, :MediaType => 8 }.to_json,
+                                :authorization => @token,
+                                :content_type => :json,
+                                :accept => :json
+    rescue => e
+    end
+  end
 end
