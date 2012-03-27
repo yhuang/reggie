@@ -6,7 +6,7 @@ class Reggie
 
   def initialize(args)
     @customer_id = args[:customer_id]
-  	@token = args[:token]
+    @token = args[:token]
 
     @base_uri = "https://api.edgecast.com/v2/mcc/customers"
     @valid = false
@@ -21,13 +21,13 @@ class Reggie
   end
 
   def valid?
-  	@valid
+    @valid
   end
 
   def load(image_url)
     begin
       response = RestClient.put "#{@base_uri}/#{@customer_id}/edge/load",
-                                { :MediaPath => image_url, :MediaType => 8 }.to_json,
+                                {:MediaPath => image_url, :MediaType => 8}.to_json,
                                 :authorization => @token,
                                 :content_type => :json,
                                 :accept => :json
@@ -38,7 +38,7 @@ class Reggie
   def purge(image_url)
     begin
       response = RestClient.put "#{@base_uri}/#{@customer_id}/edge/purge",
-                                { :MediaPath => image_url, :MediaType => 8 }.to_json,
+                                {:MediaPath => image_url, :MediaType => 8}.to_json,
                                 :authorization => @token,
                                 :content_type => :json,
                                 :accept => :json

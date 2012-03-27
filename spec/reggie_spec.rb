@@ -39,10 +39,10 @@ describe Reggie do
     before :all do
       @reg = Reggie.new(:customer_id => EDGECAST_ACCOUNT[:customer_id], :token => EDGECAST_ACCOUNT[:token])
       @urls = {
-        :empty => "",
-        :non_existent => "http://img.bleacherreport.net/img/slides/photos/002/037/135/XXX_crop_exact.jpg?w=650&h=440&q=85",
-        :valid => "http://img.bleacherreport.net/img/slides/photos/002/037/135/137267039_crop_exact.jpg?w=650&h=440&q=85",
-        :wrong_domain => "http://www.amazon.com",
+          :empty => "",
+          :non_existent => "http://img.bleacherreport.net/img/slides/photos/002/037/135/XXX_crop_exact.jpg?w=650&h=440&q=85",
+          :valid => "http://img.bleacherreport.net/img/slides/photos/002/037/135/137267039_crop_exact.jpg?w=650&h=440&q=85",
+          :wrong_domain => "http://www.amazon.com",
       }
 
       VCR.insert_cassette 'cache_management', :record => :new_episodes
