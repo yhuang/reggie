@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{reggie}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jimmy Huang"]
@@ -24,7 +24,9 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "init.rb",
     "lib/reggie.rb",
+    "rails/init.rb",
     "reggie.gemspec",
     "spec/fixtures/reggie/cache_management.yml",
     "spec/fixtures/reggie/new.yml",
