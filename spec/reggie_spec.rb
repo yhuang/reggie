@@ -12,7 +12,7 @@ describe Reggie do
 
     describe "with valid customer ID and valid authorization token" do
       it "should return valid Reggie object" do
-        Reggie.new(:customer_id => EDGECAST_ACCOUNT[:customer_id], :token => EDGECAST_ACCOUNT[:token]).valid?.should be_true
+        Reggie.new(:customer_id => EDGECAST_ACCOUNT['customer_id'], :token => EDGECAST_ACCOUNT['token']).valid?.should be_true
       end
     end
 
@@ -37,7 +37,7 @@ describe Reggie do
 
   context "Cache Management" do
     before :all do
-      @reg = Reggie.new(:customer_id => EDGECAST_ACCOUNT[:customer_id], :token => EDGECAST_ACCOUNT[:token])
+      @reg = Reggie.new(:customer_id => EDGECAST_ACCOUNT['customer_id'], :token => EDGECAST_ACCOUNT['token'])
       @urls = {
           :empty => "",
           :non_existent => "http://img.bleacherreport.net/img/slides/photos/002/037/135/XXX_crop_exact.jpg?w=650&h=440&q=85",
@@ -55,25 +55,25 @@ describe Reggie do
     [:load, :purge].each do |method|
       describe "#{method} valid cached image" do
         it "should return a 200 response" do
-          @reg.send(method, @urls[:valid]).code.should == 200
+          @reg.put(method, @urls[:valid]).code.should == 200
         end
       end
 
       describe "#{method} non-existent cached image" do
         it "should return a 200 response" do
-          @reg.send(method, @urls[:non_existent]).code.should == 200
+          @reg.put(method, @urls[:non_existent]).code.should == 200
         end
       end
 
       describe "#{method} empty URL" do
         it "should return a RestClient::BadRequest" do
-          @reg.send(method, @urls[:empty]).should be_a RestClient::BadRequest
+          @reg.put(method, @urls[:empty]).should be_a RestClient::BadRequest
         end
       end
 
       describe "#{method} image from wrong domain" do
         it "should return a RestClient::BadRequest" do
-          @reg.send(method, @urls[:wrong_domain]).should be_a RestClient::BadRequest
+          @reg.put(method, @urls[:wrong_domain]).should be_a RestClient::BadRequest
         end
       end
     end

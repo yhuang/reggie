@@ -1,21 +1,22 @@
 --- 
+recorded_with: VCR 2.0.0
 http_interactions: 
 - request: 
     method: put
     uri: https://api.edgecast.com/v2/mcc/customers/CUSTOMER_ID/edge/load
     body: 
-      string: "{\"MediaType\":8,\"MediaPath\":\"http://img.bleacherreport.net/img/slides/photos/002/037/135/137267039_crop_exact.jpg?w=650&h=440&q=85\"}"
+      string: "{\"MediaPath\":\"http://img.bleacherreport.net/img/slides/photos/002/037/135/137267039_crop_exact.jpg?w=650&h=440&q=85\",\"MediaType\":8}"
     headers: 
       Accept: 
       - application/json
-      Authorization: 
-      - TOKEN
+      Content-Type: 
+      - application/json
       Content-Length: 
       - "131"
+      Authorization: 
+      - TOKEN
       Accept-Encoding: 
       - gzip, deflate
-      Content-Type: 
-      - application/json
   response: 
     status: 
       code: 200
@@ -23,36 +24,36 @@ http_interactions:
     headers: 
       Server: 
       - Microsoft-IIS/7.5
+      Cache-Control: 
+      - private
       Date: 
-      - Tue, 27 Mar 2012 16:41:27 GMT
-      Content-Length: 
-      - "0"
+      - Wed, 28 Mar 2012 18:44:21 GMT
       X-Aspnet-Version: 
       - 4.0.30319
       X-Powered-By: 
       - ASP.NET
-      Cache-Control: 
-      - private
+      Content-Length: 
+      - "0"
     body: 
       string: ""
     http_version: 
-  recorded_at: Tue, 27 Mar 2012 16:42:37 GMT
+  recorded_at: Wed, 28 Mar 2012 18:45:33 GMT
 - request: 
     method: put
     uri: https://api.edgecast.com/v2/mcc/customers/CUSTOMER_ID/edge/load
     body: 
-      string: "{\"MediaType\":8,\"MediaPath\":\"http://img.bleacherreport.net/img/slides/photos/002/037/135/XXX_crop_exact.jpg?w=650&h=440&q=85\"}"
+      string: "{\"MediaPath\":\"http://img.bleacherreport.net/img/slides/photos/002/037/135/XXX_crop_exact.jpg?w=650&h=440&q=85\",\"MediaType\":8}"
     headers: 
       Accept: 
       - application/json
-      Authorization: 
-      - TOKEN
+      Content-Type: 
+      - application/json
       Content-Length: 
       - "125"
+      Authorization: 
+      - TOKEN
       Accept-Encoding: 
       - gzip, deflate
-      Content-Type: 
-      - application/json
   response: 
     status: 
       code: 200
@@ -60,36 +61,36 @@ http_interactions:
     headers: 
       Server: 
       - Microsoft-IIS/7.5
+      Cache-Control: 
+      - private
       Date: 
-      - Tue, 27 Mar 2012 16:41:27 GMT
-      Content-Length: 
-      - "0"
+      - Wed, 28 Mar 2012 18:44:21 GMT
       X-Aspnet-Version: 
       - 4.0.30319
       X-Powered-By: 
       - ASP.NET
-      Cache-Control: 
-      - private
+      Content-Length: 
+      - "0"
     body: 
       string: ""
     http_version: 
-  recorded_at: Tue, 27 Mar 2012 16:42:38 GMT
+  recorded_at: Wed, 28 Mar 2012 18:45:34 GMT
 - request: 
     method: put
     uri: https://api.edgecast.com/v2/mcc/customers/CUSTOMER_ID/edge/load
     body: 
-      string: "{\"MediaType\":8,\"MediaPath\":\"\"}"
+      string: "{\"MediaPath\":\"\",\"MediaType\":8}"
     headers: 
       Accept: 
       - application/json
-      Authorization: 
-      - TOKEN
-      Content-Length: 
-      - "30"
-      Accept-Encoding: 
-      - gzip, deflate
       Content-Type: 
       - application/json
+      Content-Length: 
+      - "30"
+      Authorization: 
+      - TOKEN
+      Accept-Encoding: 
+      - gzip, deflate
   response: 
     status: 
       code: 400
@@ -97,38 +98,38 @@ http_interactions:
     headers: 
       Server: 
       - Microsoft-IIS/7.5
+      Cache-Control: 
+      - private
       Date: 
-      - Tue, 27 Mar 2012 16:41:28 GMT
-      Content-Length: 
-      - "63"
+      - Wed, 28 Mar 2012 18:44:22 GMT
       X-Aspnet-Version: 
       - 4.0.30319
       X-Powered-By: 
       - ASP.NET
       Content-Type: 
       - application/json; charset=utf-8
-      Cache-Control: 
-      - private
+      Content-Length: 
+      - "63"
     body: 
       string: "{\"Message\":\"MediaPath: Path is required for this media type. \"}"
     http_version: 
-  recorded_at: Tue, 27 Mar 2012 16:42:38 GMT
+  recorded_at: Wed, 28 Mar 2012 18:45:34 GMT
 - request: 
     method: put
     uri: https://api.edgecast.com/v2/mcc/customers/CUSTOMER_ID/edge/load
     body: 
-      string: "{\"MediaType\":8,\"MediaPath\":\"http://www.amazon.com\"}"
+      string: "{\"MediaPath\":\"http://www.amazon.com\",\"MediaType\":8}"
     headers: 
       Accept: 
       - application/json
-      Authorization: 
-      - TOKEN
-      Content-Length: 
-      - "51"
-      Accept-Encoding: 
-      - gzip, deflate
       Content-Type: 
       - application/json
+      Content-Length: 
+      - "51"
+      Authorization: 
+      - TOKEN
+      Accept-Encoding: 
+      - gzip, deflate
   response: 
     status: 
       code: 400
@@ -136,38 +137,38 @@ http_interactions:
     headers: 
       Server: 
       - Microsoft-IIS/7.5
+      Cache-Control: 
+      - private
       Date: 
-      - Tue, 27 Mar 2012 16:41:28 GMT
-      Content-Length: 
-      - "183"
+      - Wed, 28 Mar 2012 18:44:22 GMT
       X-Aspnet-Version: 
       - 4.0.30319
       X-Powered-By: 
       - ASP.NET
       Content-Type: 
       - application/json; charset=utf-8
-      Cache-Control: 
-      - private
+      Content-Length: 
+      - "183"
     body: 
       string: "{\"Message\":\"Invalid strPath parameter.  Please double check the path to make sure it is valid.  Also check that the media type id represents the correct platform for the path given.\"}"
     http_version: 
-  recorded_at: Tue, 27 Mar 2012 16:42:39 GMT
+  recorded_at: Wed, 28 Mar 2012 18:45:35 GMT
 - request: 
     method: put
     uri: https://api.edgecast.com/v2/mcc/customers/CUSTOMER_ID/edge/purge
     body: 
-      string: "{\"MediaType\":8,\"MediaPath\":\"http://img.bleacherreport.net/img/slides/photos/002/037/135/137267039_crop_exact.jpg?w=650&h=440&q=85\"}"
+      string: "{\"MediaPath\":\"http://img.bleacherreport.net/img/slides/photos/002/037/135/137267039_crop_exact.jpg?w=650&h=440&q=85\",\"MediaType\":8}"
     headers: 
       Accept: 
       - application/json
-      Authorization: 
-      - TOKEN
+      Content-Type: 
+      - application/json
       Content-Length: 
       - "131"
+      Authorization: 
+      - TOKEN
       Accept-Encoding: 
       - gzip, deflate
-      Content-Type: 
-      - application/json
   response: 
     status: 
       code: 200
@@ -175,36 +176,36 @@ http_interactions:
     headers: 
       Server: 
       - Microsoft-IIS/7.5
+      Cache-Control: 
+      - private
       Date: 
-      - Tue, 27 Mar 2012 16:41:29 GMT
-      Content-Length: 
-      - "0"
+      - Wed, 28 Mar 2012 18:44:23 GMT
       X-Aspnet-Version: 
       - 4.0.30319
       X-Powered-By: 
       - ASP.NET
-      Cache-Control: 
-      - private
+      Content-Length: 
+      - "0"
     body: 
       string: ""
     http_version: 
-  recorded_at: Tue, 27 Mar 2012 16:42:39 GMT
+  recorded_at: Wed, 28 Mar 2012 18:45:36 GMT
 - request: 
     method: put
     uri: https://api.edgecast.com/v2/mcc/customers/CUSTOMER_ID/edge/purge
     body: 
-      string: "{\"MediaType\":8,\"MediaPath\":\"http://img.bleacherreport.net/img/slides/photos/002/037/135/XXX_crop_exact.jpg?w=650&h=440&q=85\"}"
+      string: "{\"MediaPath\":\"http://img.bleacherreport.net/img/slides/photos/002/037/135/XXX_crop_exact.jpg?w=650&h=440&q=85\",\"MediaType\":8}"
     headers: 
       Accept: 
       - application/json
-      Authorization: 
-      - TOKEN
+      Content-Type: 
+      - application/json
       Content-Length: 
       - "125"
+      Authorization: 
+      - TOKEN
       Accept-Encoding: 
       - gzip, deflate
-      Content-Type: 
-      - application/json
   response: 
     status: 
       code: 200
@@ -212,36 +213,36 @@ http_interactions:
     headers: 
       Server: 
       - Microsoft-IIS/7.5
+      Cache-Control: 
+      - private
       Date: 
-      - Tue, 27 Mar 2012 16:41:29 GMT
-      Content-Length: 
-      - "0"
+      - Wed, 28 Mar 2012 18:44:23 GMT
       X-Aspnet-Version: 
       - 4.0.30319
       X-Powered-By: 
       - ASP.NET
-      Cache-Control: 
-      - private
+      Content-Length: 
+      - "0"
     body: 
       string: ""
     http_version: 
-  recorded_at: Tue, 27 Mar 2012 16:42:40 GMT
+  recorded_at: Wed, 28 Mar 2012 18:45:36 GMT
 - request: 
     method: put
     uri: https://api.edgecast.com/v2/mcc/customers/CUSTOMER_ID/edge/purge
     body: 
-      string: "{\"MediaType\":8,\"MediaPath\":\"\"}"
+      string: "{\"MediaPath\":\"\",\"MediaType\":8}"
     headers: 
       Accept: 
       - application/json
-      Authorization: 
-      - TOKEN
-      Content-Length: 
-      - "30"
-      Accept-Encoding: 
-      - gzip, deflate
       Content-Type: 
       - application/json
+      Content-Length: 
+      - "30"
+      Authorization: 
+      - TOKEN
+      Accept-Encoding: 
+      - gzip, deflate
   response: 
     status: 
       code: 400
@@ -249,38 +250,38 @@ http_interactions:
     headers: 
       Server: 
       - Microsoft-IIS/7.5
+      Cache-Control: 
+      - private
       Date: 
-      - Tue, 27 Mar 2012 16:41:30 GMT
-      Content-Length: 
-      - "63"
+      - Wed, 28 Mar 2012 18:44:24 GMT
       X-Aspnet-Version: 
       - 4.0.30319
       X-Powered-By: 
       - ASP.NET
       Content-Type: 
       - application/json; charset=utf-8
-      Cache-Control: 
-      - private
+      Content-Length: 
+      - "63"
     body: 
       string: "{\"Message\":\"MediaPath: Path is required for this media type. \"}"
     http_version: 
-  recorded_at: Tue, 27 Mar 2012 16:42:41 GMT
+  recorded_at: Wed, 28 Mar 2012 18:45:36 GMT
 - request: 
     method: put
     uri: https://api.edgecast.com/v2/mcc/customers/CUSTOMER_ID/edge/purge
     body: 
-      string: "{\"MediaType\":8,\"MediaPath\":\"http://www.amazon.com\"}"
+      string: "{\"MediaPath\":\"http://www.amazon.com\",\"MediaType\":8}"
     headers: 
       Accept: 
       - application/json
-      Authorization: 
-      - TOKEN
-      Content-Length: 
-      - "51"
-      Accept-Encoding: 
-      - gzip, deflate
       Content-Type: 
       - application/json
+      Content-Length: 
+      - "51"
+      Authorization: 
+      - TOKEN
+      Accept-Encoding: 
+      - gzip, deflate
   response: 
     status: 
       code: 400
@@ -288,20 +289,19 @@ http_interactions:
     headers: 
       Server: 
       - Microsoft-IIS/7.5
+      Cache-Control: 
+      - private
       Date: 
-      - Tue, 27 Mar 2012 16:41:30 GMT
-      Content-Length: 
-      - "183"
+      - Wed, 28 Mar 2012 18:44:24 GMT
       X-Aspnet-Version: 
       - 4.0.30319
       X-Powered-By: 
       - ASP.NET
       Content-Type: 
       - application/json; charset=utf-8
-      Cache-Control: 
-      - private
+      Content-Length: 
+      - "183"
     body: 
       string: "{\"Message\":\"Invalid strPath parameter.  Please double check the path to make sure it is valid.  Also check that the media type id represents the correct platform for the path given.\"}"
     http_version: 
-  recorded_at: Tue, 27 Mar 2012 16:42:41 GMT
-recorded_with: VCR 2.0.0
+  recorded_at: Wed, 28 Mar 2012 18:45:37 GMT
