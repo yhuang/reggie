@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{reggie}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jimmy Huang"]
-  s.date = %q{2012-03-27}
+  s.date = %q{2012-03-28}
   s.description = %q{A Ruby wrapper for a caching API}
   s.email = %q{jimmy.huang@duragility.com}
   s.extra_rdoc_files = [
@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
     "lib/reggie.rb",
     "rails/init.rb",
     "reggie.gemspec",
+    "spec/config/edgecast.yml",
     "spec/fixtures/reggie/cache_management.yml",
     "spec/fixtures/reggie/new.yml",
     "spec/reggie_spec.rb",
