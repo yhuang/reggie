@@ -32,6 +32,7 @@ class Reggie
                                 :content_type => :json,
                                 :accept => :json
     rescue => e
+      e
     end
   end
 end

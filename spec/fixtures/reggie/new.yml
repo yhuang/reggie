@@ -1,5 +1,4 @@
 --- 
-recorded_with: VCR 2.0.0
 http_interactions: 
 - request: 
     method: get
@@ -7,137 +6,138 @@ http_interactions:
     body: 
       string: ""
     headers: 
-      Accept: 
-      - application/json
-      Authorization: 
-      - TOKEN
       Accept-Encoding: 
       - gzip, deflate
+      Authorization: 
+      - TOKEN
+      Accept: 
+      - application/json
   response: 
     status: 
       code: 200
       message: OK
     headers: 
-      Server: 
-      - Microsoft-IIS/7.5
+      Content-Length: 
+      - "133"
       Cache-Control: 
       - private
-      Date: 
-      - Wed, 28 Mar 2012 18:44:20 GMT
+      Server: 
+      - Microsoft-IIS/7.5
       X-Aspnet-Version: 
       - 4.0.30319
       X-Powered-By: 
       - ASP.NET
       Content-Type: 
       - application/json; charset=utf-8
-      Content-Length: 
-      - "133"
+      Date: 
+      - Thu, 29 Mar 2012 16:11:17 GMT
     body: 
       string: "[{\"MediaTypeId\":8,\"Status\":1,\"ContentTypes\":[\"text\\/plain\",\"text\\/html\",\"text\\/css\",\"application\\/x-javascript\",\"text\\/javascript\"]}]"
     http_version: 
-  recorded_at: Wed, 28 Mar 2012 18:45:32 GMT
+  recorded_at: Thu, 29 Mar 2012 16:12:35 GMT
 - request: 
     method: get
     uri: https://api.edgecast.com/v2/mcc/customers/XXXX/compression
     body: 
       string: ""
     headers: 
-      Accept: 
-      - application/json
-      Authorization: 
-      - invalid
       Accept-Encoding: 
       - gzip, deflate
+      Authorization: 
+      - invalid
+      Accept: 
+      - application/json
   response: 
     status: 
       code: 403
       message: Forbidden
     headers: 
-      Server: 
-      - Microsoft-IIS/7.5
+      Content-Length: 
+      - "26"
       Cache-Control: 
       - private
-      Date: 
-      - Wed, 28 Mar 2012 18:44:20 GMT
+      Server: 
+      - Microsoft-IIS/7.5
       X-Aspnet-Version: 
       - 4.0.30319
       X-Powered-By: 
       - ASP.NET
       Content-Type: 
       - application/json; charset=utf-8
-      Content-Length: 
-      - "26"
+      Date: 
+      - Thu, 29 Mar 2012 16:11:17 GMT
     body: 
       string: "{\"Message\":\"Invalid User\"}"
     http_version: 
-  recorded_at: Wed, 28 Mar 2012 18:45:32 GMT
+  recorded_at: Thu, 29 Mar 2012 16:12:35 GMT
 - request: 
     method: get
     uri: https://api.edgecast.com/v2/mcc/customers/XXXX/compression
     body: 
       string: ""
     headers: 
-      Accept: 
-      - application/json
+      Accept-Encoding: 
+      - gzip, deflate
       Authorization: 
       - valid
-      Accept-Encoding: 
-      - gzip, deflate
+      Accept: 
+      - application/json
   response: 
     status: 
       code: 403
       message: Forbidden
     headers: 
-      Server: 
-      - Microsoft-IIS/7.5
+      Content-Length: 
+      - "26"
       Cache-Control: 
       - private
-      Date: 
-      - Wed, 28 Mar 2012 18:44:20 GMT
+      Server: 
+      - Microsoft-IIS/7.5
       X-Aspnet-Version: 
       - 4.0.30319
       X-Powered-By: 
       - ASP.NET
       Content-Type: 
       - application/json; charset=utf-8
-      Content-Length: 
-      - "26"
+      Date: 
+      - Thu, 29 Mar 2012 16:11:17 GMT
     body: 
       string: "{\"Message\":\"Invalid User\"}"
     http_version: 
-  recorded_at: Wed, 28 Mar 2012 18:45:33 GMT
+  recorded_at: Thu, 29 Mar 2012 16:12:35 GMT
 - request: 
     method: get
     uri: https://api.edgecast.com/v2/mcc/customers/XXXX/compression
     body: 
       string: ""
     headers: 
-      Accept: 
-      - application/json
-      Authorization: 
-      - invalid
       Accept-Encoding: 
       - gzip, deflate
+      Authorization: 
+      - invalid
+      Accept: 
+      - application/json
   response: 
     status: 
       code: 403
       message: Forbidden
     headers: 
-      Server: 
-      - Microsoft-IIS/7.5
+      Content-Length: 
+      - "26"
       Cache-Control: 
       - private
-      Date: 
-      - Wed, 28 Mar 2012 18:44:20 GMT
+      Server: 
+      - Microsoft-IIS/7.5
       X-Aspnet-Version: 
       - 4.0.30319
       X-Powered-By: 
       - ASP.NET
       Content-Type: 
       - application/json; charset=utf-8
-      Content-Length: 
-      - "26"
+      Date: 
+      - Thu, 29 Mar 2012 16:11:17 GMT
     body: 
       string: "{\"Message\":\"Invalid User\"}"
     http_version: 
-  recorded_at: Wed, 28 Mar 2012 18:45:33 GMT
+  recorded_at: Thu, 29 Mar 2012 16:12:35 GMT
+recorded_with: VCR 2.0.0
