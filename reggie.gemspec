@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{reggie}
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jimmy Huang"]
-  s.date = %q{2012-03-28}
+  s.date = %q{2012-03-29}
   s.description = %q{A Ruby wrapper for a caching API}
   s.email = %q{jimmy.huang@duragility.com}
   s.extra_rdoc_files = [
