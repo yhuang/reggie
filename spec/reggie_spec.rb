@@ -18,19 +18,19 @@ describe Reggie do
 
     describe "with valid customer ID and invalid authorization token" do
       it "should return invalid Reggie object" do
-        Reggie.new(:customer_id => "XXXX", :token => "invalid").valid?.should be_false
+        Reggie.new(:customer_id => EDGECAST_ACCOUNT['customer_id'], :token => "XXXX").valid?.should be_false
       end
     end
 
     describe "with invalid customer ID and valid authorization token" do
       it "should return invalid Reggie object" do
-        Reggie.new(:customer_id => "XXXX", :token => "valid").valid?.should be_false
+        Reggie.new(:customer_id => "XXXX", :token => EDGECAST_ACCOUNT['token']).valid?.should be_false
       end
     end
 
     describe "with invalid customer ID and invalid authorization token" do
       it "should return invalid Reggie object" do
-        Reggie.new(:customer_id => "XXXX", :token => "invalid").valid?.should be_false
+        Reggie.new(:customer_id => "XXXX", :token => "XXXX").valid?.should be_false
       end
     end
   end
@@ -55,25 +55,25 @@ describe Reggie do
     [:load, :purge].each do |method|
       describe "#{method} valid cached image" do
         it "should return a 200 response" do
-          @reg.put(method, @urls[:valid]).code.should == 200
+          @reg.send(method, @urls[:valid]).code.should == 200
         end
       end
 
       describe "#{method} non-existent cached image" do
         it "should return a 200 response" do
-          @reg.put(method, @urls[:non_existent]).code.should == 200
+          @reg.send(method, @urls[:non_existent]).code.should == 200
         end
       end
 
       describe "#{method} empty URL" do
         it "should return a RestClient::BadRequest" do
-          @reg.put(method, @urls[:empty]).should be_a RestClient::BadRequest
+          @reg.send(method, @urls[:empty]).should be_a RestClient::BadRequest
         end
       end
 
       describe "#{method} image from wrong domain" do
         it "should return a RestClient::BadRequest" do
-          @reg.put(method, @urls[:wrong_domain]).should be_a RestClient::BadRequest
+          @reg.send(method, @urls[:wrong_domain]).should be_a RestClient::BadRequest
         end
       end
     end

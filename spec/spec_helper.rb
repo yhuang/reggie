@@ -15,7 +15,7 @@ end
 EDGECAST_ACCOUNT = YAML.load open File.join File.dirname(__FILE__), "config", "edgecast.yml"
 
 VCR.configure do |config|
-  config.cassette_library_dir = 'spec/fixtures/reggie'
+  config.cassette_library_dir = 'spec/fixtures/vcr'
   config.filter_sensitive_data('CUSTOMER_ID') { EDGECAST_ACCOUNT['customer_id'] }
   config.filter_sensitive_data('TOKEN') { EDGECAST_ACCOUNT['token'] }
   config.hook_into :webmock
