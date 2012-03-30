@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "reggie"
+  s.name = %q{reggie}
   s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jimmy Huang"]
-  s.date = "2012-03-30"
-  s.description = "A Ruby wrapper for a caching API"
-  s.email = "jimmy.huang@duragility.com"
+  s.date = %q{2012-03-30}
+  s.description = %q{A Ruby wrapper for a caching API}
+  s.email = %q{jimmy.huang@duragility.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -35,11 +35,11 @@ Gem::Specification.new do |s|
     "spec/reggie_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = "http://github.com/yhuang/reggie"
+  s.homepage = %q{http://github.com/yhuang/reggie}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.11"
-  s.summary = "A Ruby wrapper for a caching API"
+  s.rubygems_version = %q{1.4.2}
+  s.summary = %q{A Ruby wrapper for a caching API}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
