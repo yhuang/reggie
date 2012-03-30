@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{reggie}
-  s.version = "0.1.3"
+  s.name = "reggie"
+  s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jimmy Huang"]
-  s.date = %q{2012-03-29}
-  s.description = %q{A Ruby wrapper for a caching API}
-  s.email = %q{jimmy.huang@duragility.com}
+  s.date = "2012-03-30"
+  s.description = "A Ruby wrapper for a caching API"
+  s.email = "jimmy.huang@duragility.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -25,20 +25,21 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "init.rb",
+    "lib/cache_accessor.rb",
     "lib/reggie.rb",
     "rails/init.rb",
     "reggie.gemspec",
     "spec/config/edgecast.yml",
-    "spec/fixtures/reggie/cache_management.yml",
-    "spec/fixtures/reggie/new.yml",
+    "spec/fixtures/vcr/cache_management.yml",
+    "spec/fixtures/vcr/new.yml",
     "spec/reggie_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/yhuang/reggie}
+  s.homepage = "http://github.com/yhuang/reggie"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.4.2}
-  s.summary = %q{A Ruby wrapper for a caching API}
+  s.rubygems_version = "1.8.11"
+  s.summary = "A Ruby wrapper for a caching API"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
@@ -47,20 +48,20 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<rest-client>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
+      s.add_development_dependency(%q<bundler>, ["~> 1.1.3"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.3"])
     else
       s.add_dependency(%q<rest-client>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_dependency(%q<bundler>, ["~> 1.0.0"])
+      s.add_dependency(%q<bundler>, ["~> 1.1.3"])
       s.add_dependency(%q<jeweler>, ["~> 1.8.3"])
     end
   else
     s.add_dependency(%q<rest-client>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2.8.0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
-    s.add_dependency(%q<bundler>, ["~> 1.0.0"])
+    s.add_dependency(%q<bundler>, ["~> 1.1.3"])
     s.add_dependency(%q<jeweler>, ["~> 1.8.3"])
   end
 end
